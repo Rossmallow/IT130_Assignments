@@ -25,7 +25,7 @@
         
     function dollarsToPesos() {
         var usDollars = document.getElementById('usd').value;
-        var mexicanPesos = usDollars * 19.29;
+        var mexicanPesos = Math.round(usDollars * 19.29);
         
         document.write("$" + usDollars + " converts to $" + mexicanPesos + ".");
     }
