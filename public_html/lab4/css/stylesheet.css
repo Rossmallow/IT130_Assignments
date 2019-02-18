@@ -1,0 +1,171 @@
+/* stylesheet.css */
+/* Ross Nelson IT 130 Lab 4 */
+
+@font-face {
+    font-family: UnitedSansCond-Bold;
+    src: url("../fonts/UnitedSansCond-Bold.otf");
+}
+
+@font-face {
+    font-family: BlaxSlabXXL;
+    src: url("../fonts/BlaxSlabXXL.ttf");
+}
+
+body {
+    background-color: #aa0000;
+    background-image: url("../images/background.jpg");
+    background-size: contain;
+    background-blend-mode: darken;
+    margin: 0;
+}
+
+.wrapper {
+    width: 64em;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.headerBar {
+    background-color: #aa0000;
+    padding: 3em;
+    border-top: solid 1em white;
+    margin-bottom: -9em;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+nav h2 {
+    font-family: BlaxSlabXXL;
+    font-weight: lighter;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav img {
+    width: 8em;
+    padding-right: 2em;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+    color: white;
+    margin-top: -3.5em;
+}
+
+.navBar li {
+    text-transform: uppercase;
+    padding: 1em 2em;
+    list-style-type: none;
+}
+
+article {
+    background: white;
+    padding: 0 .75em;
+    clear: left;
+}
+
+section {
+    background-color: white;
+    padding: 1em;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+h1 {
+    color: black;
+    font-family: UnitedSansCond-Bold;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    background: white;
+    padding: .75em;
+    margin: .25em 0;
+}
+
+h3 {
+    color: #aa0000;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intro h2 {
+    text-align: center;
+    margin: 0em;
+}
+
+.intro p {
+    width: 50em;
+}
+
+.intro img {
+    width: 5em;
+}
+
+.appearances {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.appearances h2 {
+    color: white;
+    font-family: UnitedSansCond-Bold;
+    font-size: 2em;
+    background-color: black;
+    text-transform: uppercase;
+    margin-top: 0;
+    border-left: solid .25em #aa0000;
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.subAppearance {
+    background-color: #f2f2f2;
+    flex: 1 0 0;
+    margin: .5em;
+}
+
+.subAppearance img {
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: #aa0000;
+    padding: .6em 2em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+    background: black;
+    padding: 1em;
+    margin: 0;
+}
+
+footer img {
+    width: 5em;
+    margin-right: 2em;
+}
+
+footer small {
+    color: white;
+    font-family: sans-serif;
+    margin-left: 2em;
+}

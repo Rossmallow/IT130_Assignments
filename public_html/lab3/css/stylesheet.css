@@ -1,0 +1,120 @@
+/* stylesheet.css */
+/* Ross Nelson IT 130 Lab 3 */
+
+@font-face {
+    font-family: PinkSans;
+    src: url("../fonts/PinkSans.ttf");
+}
+
+body {
+    background: black;
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.wrapper {
+    width: 50em;
+    margin: .5em auto -2em auto;
+    font-family: sans-serif;
+}
+
+header {
+    margin: 0;
+}
+
+article {
+    background: white;
+    padding: 0 .75em;
+    clear: left;
+}
+
+h1 {
+    color: black;
+    font-family: PinkSans;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    background: white;
+    padding: .75em;
+    margin: .25em 0;
+}
+
+p {
+    color: #1a1a1a;
+    padding: 0 0 .5em 0;
+    line-height: 1.75em;
+}
+
+.appearancesSection {
+    background: #f2f2f2;
+    padding: 0 0 3em 0;
+    margin: 1em 0;
+}
+
+.bioSection {
+    background: #f2f2f2;
+    padding: 2em 1.5em;
+    margin: 2em 0;
+}
+
+.h2IMG {
+    width: 100%;
+}
+
+.appearancesIMG {
+    float: left;
+    width: 40%;
+    padding-right: 1em;
+}
+
+.bioIMG {
+    float: right;
+    padding-left: 1em;
+}
+
+.H2Title {
+    color: white;
+    font-family: PinkSans;
+    font-size: 2em;
+    background: black;
+    text-transform: uppercase;
+    padding: .4em;
+    margin: .5em 0 1em 0;
+    border-left: solid .25em #aa0000;
+}
+
+.appearancesH3 {
+    color: #aa0000;
+    padding: 1em 0 0 0;
+}
+
+.bioH3 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background: #aa0000;
+    padding: .75em 2em;
+    margin-left: 20em;
+}
+
+.bioP {
+    font-family: sans-serif;
+    width: 25em;
+    margin: 0 0 4em 0;
+}
+
+footer {
+    background: #1a1a1a;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 1em;
+    border-top: solid .1em darkgrey;
+}
+
+.footerP {
+    color: white;
+}

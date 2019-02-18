@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>In-Class JS Exercises</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="In-Class JS Exercises">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+
+    <script>
+        function squareRootTwo() {
+            alert(Math.sqrt(2));
+            }
+        
+    function fiftyDollarsToPesos() {
+        var usDollars;
+        var mexicanPesos;
+        
+        usDollars = 50;
+        mexicanPesos = usDollars * 19.29;
+        alert("You get about $" + Math.round(mexicanPesos) + "!");
+    }
+        
+    function dollarsToPesos() {
+        var usDollars = document.getElementById('usd').value;
+        var mexicanPesos = usDollars * 19.29;
+        
+        document.write("$" + usDollars + " converts to $" + mexicanPesos + ".");
+    }
+
+    </script>
+</head>
+
+<body>
+
+    <script>
+        alert("Hello");
+        alert(4 + 3);
+        alert(Date());
+    </script>
+
+    <form id="rootTwo">
+        <input type="button" value="Click to find the Square Root of 2!" onclick="squareRootTwo()">
+    </form>
+
+    <input type="button" value="Convert $50 US Dollars to Pesos" id="btnSubmit" onclick="fiftyDollarsToPesos()">
+
+    <form id="convertToPesos">
+        <p>Convert $ <input type="text" id="usd"> USD to MXN</p>
+        <input type="button" value="Convert" id="btnSubmit" onclick="dollarsToPesos()">
+    </form>
+
+</body>
+
+</html>

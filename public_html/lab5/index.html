@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 5</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="Lab 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script>
+        function submitOrder() {
+            // Gets the value of the selected quantity option
+            var quantityElement = document.getElementById('quantity');
+            var quantity = quantityElement.options[quantityElement.selectedIndex].text;
+            
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            
+            // Ensures that the first character of the first name is capitalized
+            firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+            
+            // Ensures that the first character of the last name is capitalized
+            lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+            
+            var emailAddress = document.getElementById('emailAddress').value;
+            
+            // Gets the value of the selected mailing list option
+            var mailingListElement = document.getElementById('mailingList');
+            var mailingList = mailingListElement.options[mailingListElement.selectedIndex].text;
+            
+            var abaciPrice = 15;
+            var totalCost = quantity * abaciPrice;
+            
+            // Changes the plurality of the word abacus depending on quantity
+            var pluralToggle = "abacus";
+            if (quantity > 1) {
+                pluralToggle = "abaci";
+            }
+            
+            // Changes the confirmation message to reflect mailing list selection
+            var mailingToggle = " ";
+            if (mailingList == "No") {
+                mailingToggle = " not ";
+            }
+            
+            // Confirmation message
+            document.write("<p>Thank you, " + firstName + ", for your order. We will inquire your address to ship to:<br>" + firstName + " " + lastName + "<br>" + emailAddress + "<br><br>You are buying " + quantity + " " + pluralToggle + " at $" + abaciPrice + " per unit.<br>Your total will be $" + totalCost + " upon delivery.<br>We will" + mailingToggle + "add you to our mailing list.</p>");
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <section class="banner">
+            <img src="images/abacusHeader.png" alt="Abacus Banner Image" class="banner">
+            <h1>Ross' Abaci</h1>
+            <h2>You can count on us!</h2>
+        </section>
+    </header>
+    <div class="wrapper">
+        <section class="content">
+            <h3>New for 2019: The Counter</h3>
+            <p>Need a new abacus for Spring? Take a look at what we have to offer. Our new abaci can solve all your age old number problems for just $15. Buy one or buy several. We don't mind if you buy a lot. We know how to tally them up.</p>
+
+            <form id="abaciOrder">
+                <ol>
+                    <li>Order Quantity: <select id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </li>
+                    <li>First Name: <input type="text" placeholder="Abby" id="firstName">
+                    </li>
+                    <li>Last Name: <input type="text" placeholder="Kiss" id="lastName">
+                    </li>
+                    <li>Email Address: <input type="email" placeholder="AbbyKiss@counting.com" id="emailAddress">
+                    </li>
+                    <li>Would you like to join our mailing list? <select id="mailingList">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </li>
+                </ol>
+                <input type="button" value="Submit Order" id="submit" onclick="submitOrder()" class="button">
+            </form>
+        </section>
+        <img src="images/abacus.png" alt="Abacus">
+    </div>
+    <footer>
+        <small>Copyright &copy;<time>2019</time>.<br>
+            This fictional page is a DePaul CDM academic project.</small>
+    </footer>
+</body>
