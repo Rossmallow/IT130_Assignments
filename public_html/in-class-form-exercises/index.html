@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>In-Class Form Exercises</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="In-Class Form Exercises">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+
+    <script>
+        function convertTemp() {
+                var inputTemp = document.getElementById('numInputTemp').value;
+                var outputTemp = inputTemp;
+
+                if (document.getElementById('fToC').checked) {
+                    outputTemp = Math.round((inputTemp - 32) * .5556);
+                    alert(inputTemp + " \xB0F is about " + outputTemp + " \xB0C");
+                }
+                else {
+                    outputTemp = Math.round((inputTemp / .5556) + 32);
+                    alert(inputTemp + " \xB0C is about " + outputTemp + " \xB0F");
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>Convert temperatures below.</p><br>
+        <form id="convertTemp">
+            Fahrenheit to Celsius <input type="radio" name="radConvertTemp" id="fToC" checked="true"><br>
+            Celsius to Fahrenheit <input type="radio" name="radConvertTemp" id="cToF">
+            <br><br>
+            Enter Temperature to Convert: <input type="number" id="numInputTemp" value=0 style="width: 3em;">&deg;
+            <br>
+            <input type="button" id="btnSubmit" value="Convert" onclick="convertTemp()">
+        </form>
+    </div>
+</body>
+
+</html>
