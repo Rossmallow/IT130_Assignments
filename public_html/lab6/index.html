@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 6</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="Lab 6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script>
+        function calculate() {
+            var numOne = Number(document.getElementById('numOne').value);
+            var numTwo = Number(document.getElementById('numTwo').value);
+            var numThree = Number(document.getElementById('numThree').value);
+            
+            var sum = numOne + numTwo + numThree;
+            var sqRoot = Math.sqrt(sum).toFixed(2);
+            
+            alert("The sum of " + numOne + " and " + numTwo + " and " + numThree + " is " + sum + ". The square root of " + sum + " is " + sqRoot + ".")
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="content">
+            <h2>Calculator</h2>
+            <form id="math">
+                <ol>
+                    <li>
+                        Number 1:<input type="number" placeholder=0 id="numOne">
+                    </li>
+                    <li>
+                        Number 2:<input type="number" placeholder=0 id="numTwo">
+                    </li>
+                    <li>
+                        Number 3:<input type="number" placeholder=0 id="numThree">
+                    </li>
+                    <li><img type="button" onclick="calculate()" id="btnSubmit" src="images/go.jpg"></li>
+                </ol>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

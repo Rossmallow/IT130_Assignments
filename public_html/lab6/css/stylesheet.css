@@ -1,0 +1,58 @@
+/* stylesheet.css */
+/* Ross Nelson IT 130 Lab 6 */
+
+body {
+    margin: auto;
+    background-color: gainsboro;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 10em auto;
+    padding: 5em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    outline: solid black 1px;
+}
+
+section {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: solid gainsboro 1px;
+}
+
+h2 {
+    color: white;
+    background-color: mediumpurple;
+    width: inherit;
+    padding: .5em;
+    margin: -1em auto auto auto;
+    text-align: center;
+}
+
+form {
+    color: black;
+}
+
+ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+input {
+    width: 4em;
+    margin-left: 1em;
+}
+
+img {
+    height: 100px;
+    width: 150px;
+    margin-top: 1em;
+}
