@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 7</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="Lab 7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script>
+        function slugPer() {
+            var name = document.getElementById('txtName').value;
+            var atBats = Number(document.getElementById('numAtBats').value);
+            var singles = Number(document.getElementById('numSingles').value);
+            var doubles = Number(document.getElementById('numDoubles').value);
+            var triples = Number(document.getElementById('numTriples').value);
+            var homeRuns = Number(document.getElementById('numHomeRuns').value);
+
+            var totalBases = singles + (2 * doubles) + (3 * triples) + (4 * homeRuns);
+            var sluggingPercentage = (totalBases / atBats).toFixed(3);
+
+            if (isNaN(sluggingPercentage)) {
+                document.getElementById('slugResult').innerHTML = "<p>Please renter data for an accurate calculation.</p>"
+            } else {
+                document.getElementById('slugResult').innerHTML = "<p>" + name + "'s slugging percentage is " + sluggingPercentage + "</p>"
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Slugging Percentage Calculator</h2>
+        <form id="math">
+            <p>Batter's Name:<input type="text" placeholder="Sam Slugger" id="txtName"></p>
+            <p>Enter number of At Bats:<input type="number" placeholder="0" id="numAtBats"></p>
+            <p>Enter number of Singles:<input type="number" placeholder="0" id="numSingles"></p>
+            <p>Enter number of Doubles:<input type="number" placeholder="0" id="numDoubles"></p>
+            <p>Enter number of Triples:<input type="number" placeholder="0" id="numTriples"></p>
+            <p>Enter number of HomeRuns:<input type="number" placeholder="0" id="numHomeRuns"></p>
+            <p><input class="button" type="button" value="What's the Slugging Percentage?" onclick="slugPer()"></p>
+        </form>
+        <section id="slugResult" class="result"></section>
+    </div>
+</body>
+
+</html>
