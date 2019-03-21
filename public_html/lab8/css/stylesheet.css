@@ -1,0 +1,58 @@
+/* stylesheet.css */
+/* Ross Nelson IT 130 Lab 8 */
+
+body {
+    margin: auto;
+}
+
+.wrapper {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+h2 {
+    color: rebeccapurple;
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: mediumpurple;
+    border: solid 1px rebeccapurple;
+    padding: 1em;
+}
+
+form section {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+form h3 {
+    text-align: center;
+}
+
+form p {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    width: 18.5em;
+    text-align: center;
+    align-self: center;
+}
+
+.result {
+    align-self: center;
+    width: 510px;
+    border: solid 1px rebeccapurple;
+    text-align: center;
+    margin: 1em;
+}

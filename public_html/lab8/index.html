@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 8</title>
+    <meta name="author" content="Ross Nelson">
+    <meta name="description" content="Lab 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script>
+        function favStation() {
+            var station
+            var stationURL
+
+            if (document.getElementById('radioWTMX').checked) {
+                station = "The Mix 101.9"
+                stationURL = "https://wtmx.com/"
+            } else if (document.getElementById('radioWDRV').checked) {
+                station = "The Drive 97.1"
+                stationURL = "https://wdrv.com/"
+            } else if (document.getElementById('radioWUSN').checked) {
+                station = "US 99 Country 99.5"
+                stationURL = "https://us99.radio.com/"
+            }
+
+            document.getElementById('result').innerHTML = "<p>Your favorite station is " + station + ".<br>Visit it at <a href=" + stationURL + ">" + stationURL + "</a>!</p>";
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+            <h2>Radio Stations</h2>
+            <form class="stations">
+                <h3>Please select all of the stations that you listen to below.</h3>
+                <section class="checkStations">
+                    <p><input type="checkbox" name="station1" value="WTMX">The Mix 101.9</p>
+                    <p><input type="checkbox" name="station2" value="WDRV">The Drive 97.1</p>
+                    <p><input type="checkbox" name="station3" value="WUSN">US 99 Country 99.5</p>
+                </section>
+                <h3>Please select your favorite radio station below.</h3>
+                <section class="radioStations">
+                    <p><input type="radio" name="station" id="radioWTMX" value="WTMX">The Mix 101.9</p>
+                    <p><input type="radio" name="station" id="radioWDRV" value="WDRV">The Drive 97.1</p>
+                    <p><input type="radio" name="station" id="radioWUSN" value="WUSN">US 99 Country 99.5</p>
+                </section>
+                <input type="button" class="button" value="Submit" id="btnSubmit" onclick="favStation()">
+            </form>
+        </section>
+        <div id="result" class="result"><br></div>
+    </div>
+</body>
+
+</html>
